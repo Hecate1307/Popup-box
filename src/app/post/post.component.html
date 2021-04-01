@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="text-center"><a class="title" (click)="openDialogNew()">Add New Post</a></div>
+</header>
+
+<section class="search-results">
+    <div class="card-grounp">
+        <div class="card" *ngFor="let post of postData; let i = index;">
+            <div>
+                <div class="infor">
+                    <div class="card-title">
+                        {{post.title}}
+                    </div>
+                    <div class="card-body">
+                        {{post.body}}
+                    </div>
+                </div>
+                <div class="edit mr-1">
+                    <button class="btn btn-primary mx-1" (click)="onUpdate(post)">Update</button>
+                    <button class="btn btn-danger" (click)="onDelete(post)">Delete</button>
+                </div>
+            </div>
+
+        </div>
+        <div *ngFor="let num of [0,1,2,3,4,5,6,7,8,9]" class="emptyCard"></div>
+    </div>
+</section>
